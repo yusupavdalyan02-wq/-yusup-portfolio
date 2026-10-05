@@ -1,0 +1,1124 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Persönliches Bewerberprofil & Portfolio von Yusup Avdalyan · Berlin">
+<title>Yusup Avdalyan — Persönliches Portfolio</title>
+
+<style>
+:root{
+  --bg:#f5f4f1;
+  --surface:#ffffff;
+  --ink:#171717;
+  --muted:#707070;
+  --line:#deddd9;
+  --soft:#ecebe7;
+  --accent:#b8873b;
+  --max:1180px;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif;
+  background:var(--bg);
+  color:var(--ink);
+  line-height:1.6;
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+.container{
+  width:min(calc(100% - 40px),var(--max));
+  margin:auto;
+}
+
+/* HEADER */
+
+header{
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  z-index:100;
+  background:rgba(245,244,241,.88);
+  backdrop-filter:blur(18px);
+  border-bottom:1px solid rgba(0,0,0,.08);
+}
+
+.nav{
+  height:76px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.logo{
+  font-size:18px;
+  font-weight:700;
+  letter-spacing:-.03em;
+}
+
+.logo span{
+  color:var(--accent);
+}
+
+nav{
+  display:flex;
+  gap:28px;
+}
+
+nav a{
+  font-size:13px;
+  color:#555;
+  transition:.2s;
+}
+
+nav a:hover{
+  color:#000;
+}
+
+.menu{
+  display:none;
+}
+
+/* HERO */
+
+.hero{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  padding:130px 0 90px;
+}
+
+.hero-grid{
+  display:grid;
+  grid-template-columns:1.25fr .75fr;
+  gap:80px;
+  align-items:center;
+}
+
+.eyebrow{
+  font-size:12px;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  color:var(--accent);
+  font-weight:700;
+  margin-bottom:20px;
+}
+
+h1{
+  font-size:clamp(58px,9vw,118px);
+  line-height:.88;
+  letter-spacing:-.075em;
+  font-weight:700;
+  margin-bottom:32px;
+}
+
+.hero-text{
+  max-width:650px;
+  font-size:21px;
+  color:#4f4f4f;
+  line-height:1.55;
+}
+
+.hero-actions{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+  margin-top:36px;
+}
+
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:48px;
+  padding:0 22px;
+  border-radius:999px;
+  font-size:14px;
+  font-weight:600;
+  border:1px solid var(--ink);
+  transition:.2s;
+}
+
+.btn-dark{
+  background:var(--ink);
+  color:#fff;
+}
+
+.btn-dark:hover{
+  transform:translateY(-2px);
+}
+
+.btn-light{
+  background:transparent;
+}
+
+.btn-light:hover{
+  background:#fff;
+}
+
+/* PROFILE IMAGE */
+
+.profile-card{
+  background:#e8e6e1;
+  min-height:500px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;
+  position:relative;
+}
+
+.profile-card img{
+  width:100%;
+  height:100%;
+  min-height:500px;
+  object-fit:cover;
+}
+
+.profile-placeholder{
+  text-align:center;
+  color:#777;
+  padding:40px;
+}
+
+.profile-placeholder strong{
+  display:block;
+  font-size:50px;
+  color:#222;
+  margin-bottom:10px;
+}
+
+/* SECTIONS */
+
+section{
+  padding:110px 0;
+}
+
+.section-head{
+  display:grid;
+  grid-template-columns:.35fr 1fr;
+  gap:60px;
+  margin-bottom:65px;
+}
+
+.section-number{
+  font-size:13px;
+  color:var(--accent);
+  font-weight:700;
+  letter-spacing:.15em;
+}
+
+.section-title{
+  font-size:clamp(38px,5vw,68px);
+  letter-spacing:-.055em;
+  line-height:1;
+}
+
+.section-intro{
+  max-width:700px;
+  margin-top:20px;
+  color:#666;
+  font-size:18px;
+}
+
+/* PROFILE */
+
+.profile-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  border-top:1px solid var(--line);
+}
+
+.profile-item{
+  padding:28px 0;
+  border-bottom:1px solid var(--line);
+}
+
+.profile-item:nth-child(odd){
+  padding-right:40px;
+}
+
+.profile-item:nth-child(even){
+  padding-left:40px;
+  border-left:1px solid var(--line);
+}
+
+.profile-item h3{
+  font-size:14px;
+  text-transform:uppercase;
+  letter-spacing:.12em;
+  margin-bottom:9px;
+}
+
+.profile-item p{
+  color:#666;
+}
+
+/* TIMELINE */
+
+.timeline{
+  border-top:1px solid var(--line);
+}
+
+.timeline-item{
+  display:grid;
+  grid-template-columns:190px 1fr;
+  gap:50px;
+  padding:35px 0;
+  border-bottom:1px solid var(--line);
+}
+
+.timeline-date{
+  font-size:14px;
+  color:var(--accent);
+  font-weight:700;
+}
+
+.timeline h3{
+  font-size:24px;
+  letter-spacing:-.02em;
+  margin-bottom:8px;
+}
+
+.timeline p{
+  color:#666;
+}
+
+/* SKILLS */
+
+.skills{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:16px;
+}
+
+.skill{
+  background:var(--surface);
+  padding:32px;
+  min-height:210px;
+  border:1px solid var(--line);
+  transition:.25s;
+}
+
+.skill:hover{
+  transform:translateY(-4px);
+  box-shadow:0 15px 35px rgba(0,0,0,.06);
+}
+
+.skill-number{
+  color:var(--accent);
+  font-size:12px;
+  font-weight:700;
+  margin-bottom:45px;
+}
+
+.skill h3{
+  font-size:22px;
+  margin-bottom:10px;
+}
+
+.skill p{
+  color:#6a6a6a;
+  font-size:14px;
+}
+
+/* LANGUAGES */
+
+.languages{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  border-top:1px solid var(--line);
+}
+
+.language{
+  display:flex;
+  justify-content:space-between;
+  padding:20px 0;
+  border-bottom:1px solid var(--line);
+  font-size:16px;
+}
+
+.language:nth-child(even){
+  padding-left:40px;
+  border-left:1px solid var(--line);
+}
+
+.level{
+  color:var(--muted);
+}
+
+/* MOBILITY */
+
+.mobility{
+  background:#181818;
+  color:#fff;
+  padding:55px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:60px;
+}
+
+.mobility h3{
+  font-size:34px;
+  letter-spacing:-.04em;
+  margin-bottom:15px;
+}
+
+.mobility p{
+  color:#aaa;
+}
+
+.mobility-status{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-left:1px solid #444;
+  font-size:18px;
+  text-align:center;
+  padding:20px;
+}
+
+/* DOCUMENTS */
+
+.documents{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:16px;
+}
+
+.document{
+  background:#fff;
+  border:1px solid var(--line);
+  padding:28px;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  min-height:190px;
+}
+
+.document small{
+  color:var(--accent);
+  text-transform:uppercase;
+  letter-spacing:.13em;
+  font-weight:700;
+  font-size:10px;
+}
+
+.document h3{
+  font-size:20px;
+  margin:22px 0;
+}
+
+.document a{
+  font-size:13px;
+  font-weight:700;
+}
+
+/* CONTACT */
+
+.contact{
+  background:#181818;
+  color:#fff;
+}
+
+.contact .section-number{
+  color:#cda05d;
+}
+
+.contact .section-title{
+  color:#fff;
+}
+
+.contact-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:70px;
+}
+
+.contact-link{
+  display:flex;
+  gap:20px;
+  padding:22px 0;
+  border-bottom:1px solid #444;
+  align-items:center;
+}
+
+.contact-icon{
+  width:40px;
+  height:40px;
+  border:1px solid #555;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.contact-text small{
+  display:block;
+  color:#888;
+  font-size:11px;
+  text-transform:uppercase;
+  letter-spacing:.12em;
+}
+
+.contact-text strong{
+  font-size:17px;
+  font-weight:500;
+}
+
+/* FOOTER */
+
+footer{
+  background:#111;
+  color:#777;
+  padding:28px 0;
+  font-size:12px;
+}
+
+.footer-inner{
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:850px){
+
+  nav{
+    display:none;
+  }
+
+  .menu{
+    display:block;
+    font-size:13px;
+  }
+
+  .hero{
+    padding-top:120px;
+  }
+
+  .hero-grid{
+    grid-template-columns:1fr;
+    gap:50px;
+  }
+
+  .profile-card,
+  .profile-card img{
+    min-height:380px;
+  }
+
+  .section-head{
+    grid-template-columns:1fr;
+    gap:20px;
+  }
+
+  .skills,
+  .documents{
+    grid-template-columns:1fr;
+  }
+
+  .profile-grid,
+  .languages{
+    grid-template-columns:1fr;
+  }
+
+  .profile-item:nth-child(even),
+  .language:nth-child(even){
+    padding-left:0;
+    border-left:0;
+  }
+
+  .profile-item:nth-child(odd){
+    padding-right:0;
+  }
+
+  .timeline-item{
+    grid-template-columns:1fr;
+    gap:8px;
+  }
+
+  .mobility,
+  .contact-grid{
+    grid-template-columns:1fr;
+  }
+
+  .mobility{
+    padding:35px;
+  }
+
+  .mobility-status{
+    border-left:0;
+    border-top:1px solid #444;
+  }
+
+  .footer-inner{
+    flex-direction:column;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="container nav">
+    <a href="#top" class="logo">YUSUP<span>.</span></a>
+
+    <nav>
+      <a href="#profil">Profil</a>
+      <a href="#werdegang">Werdegang</a>
+      <a href="#kompetenzen">Kompetenzen</a>
+      <a href="#dokumente">Dokumente</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+
+    <div class="menu">Berlin · Portfolio</div>
+  </div>
+</header>
+
+
+<main id="top">
+
+<!-- HERO -->
+
+<section class="hero">
+  <div class="container hero-grid">
+
+    <div>
+      <div class="eyebrow">Persönliches Bewerberprofil · Berlin</div>
+
+      <h1>Yusup<br>Avdalyan</h1>
+
+      <p class="hero-text">
+        Technik. Prozesse. Menschen. Verantwortung.
+        Ein persönliches Portfolio über meinen bisherigen Weg,
+        meine praktischen Erfahrungen, meine Kompetenzen und
+        meine Bereitschaft, mich fachlich weiterzuentwickeln.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#profil" class="btn btn-dark">Profil ansehen →</a>
+        <a href="#dokumente" class="btn btn-light">Dokumente →</a>
+      </div>
+    </div>
+
+    <div class="profile-card">
+      <img src="Documents/Bild.png"
+           alt="Yusup Avdalyan"
+           onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+
+      <div class="profile-placeholder" style="display:none;">
+        <strong>YA</strong>
+        Persönliches Bewerberprofil
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- PROFIL -->
+
+<section id="profil">
+  <div class="container">
+
+    <div class="section-head">
+      <div class="section-number">01 / PROFIL</div>
+
+      <div>
+        <h2 class="section-title">Wer ich bin.</h2>
+        <p class="section-intro">
+          Ich arbeite sorgfältig, lerne neue Abläufe schnell und
+          interessiere mich dafür, wie Menschen, Technik und Prozesse
+          sinnvoll zusammenspielen.
+        </p>
+      </div>
+    </div>
+
+    <div class="profile-grid">
+
+      <div class="profile-item">
+        <h3>Technik</h3>
+        <p>
+          Interesse an technischen Zusammenhängen, IT,
+          Windows, Netzwerken und digitalen Arbeitsabläufen.
+        </p>
+      </div>
+
+      <div class="profile-item">
+        <h3>Lernbereitschaft</h3>
+        <p>
+          Neue Aufgaben zunächst verstehen, anschließend praktisch
+          anwenden und Schritt für Schritt selbstständiger bearbeiten.
+        </p>
+      </div>
+
+      <div class="profile-item">
+        <h3>Zuverlässigkeit</h3>
+        <p>
+          Sorgfältiges Arbeiten, Verbindlichkeit und ein bewusster
+          Umgang mit übertragenen Aufgaben.
+        </p>
+      </div>
+
+      <div class="profile-item">
+        <h3>Prozessdenken</h3>
+        <p>
+          Arbeitsabläufe nicht nur ausführen, sondern ihre einzelnen
+          Schritte verstehen und Zusammenhänge erkennen.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- WERDEGANG -->
+
+<section id="werdegang">
+  <div class="container">
+
+    <div class="section-head">
+      <div class="section-number">02 / WERDEGANG</div>
+
+      <div>
+        <h2 class="section-title">Erfahrungen.</h2>
+        <p class="section-intro">
+          Unterschiedliche praktische Stationen haben mir Einblicke
+          in Kundenkontakt, Service, Verkauf, Organisation und
+          sorgfältiges Arbeiten vermittelt.
+        </p>
+      </div>
+    </div>
+
+    <div class="timeline">
+
+      <div class="timeline-item">
+        <div class="timeline-date">2021 – 2022</div>
+        <div>
+          <h3>Verkauf & Warenorganisation</h3>
+          <p>
+            Verkauf, Waren, Kasse und Kundenorientierung.
+          </p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-date">2022 – 2023</div>
+        <div>
+          <h3>Elektronikberatung</h3>
+          <p>
+            Kundenberatung und verständliche Erklärung
+            technischer Produkte.
+          </p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-date">2023 – 2025</div>
+        <div>
+          <h3>Gastgewerbe & Service</h3>
+          <p>
+            Gästebetreuung, Service und organisatorische Aufgaben.
+          </p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-date">2025 – 2026</div>
+        <div>
+          <h3>Gebäudereinigung & Ausbildung</h3>
+          <p>
+            Praktische Tätigkeiten in Reinigung, Umgang mit
+            Maschinen, Hygiene und Arbeitssicherheit.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- KOMPETENZEN -->
+
+<section id="kompetenzen">
+  <div class="container">
+
+    <div class="section-head">
+      <div class="section-number">03 / KOMPETENZEN</div>
+
+      <div>
+        <h2 class="section-title">Was ich mitbringe.</h2>
+      </div>
+    </div>
+
+    <div class="skills">
+
+      <div class="skill">
+        <div class="skill-number">01</div>
+        <h3>Microsoft Office</h3>
+        <p>
+          Word, Excel und PowerPoint für alltägliche
+          organisatorische und dokumentarische Aufgaben.
+        </p>
+      </div>
+
+      <div class="skill">
+        <div class="skill-number">02</div>
+        <h3>IT-Grundlagen</h3>
+        <p>
+          Windows-Installation und grundlegende Konfiguration
+          sowie Interesse an IT-Systemen.
+        </p>
+      </div>
+
+      <div class="skill">
+        <div class="skill-number">03</div>
+        <h3>Netzwerke</h3>
+        <p>
+          Grundkenntnisse zu Netzwerken, WLAN und Routern.
+        </p>
+      </div>
+
+      <div class="skill">
+        <div class="skill-number">04</div>
+        <h3>Kundenorientierung</h3>
+        <p>
+          Erfahrung im direkten Kontakt mit Kunden,
+          Beratung und Service.
+        </p>
+      </div>
+
+      <div class="skill">
+        <div class="skill-number">05</div>
+        <h3>Organisation</h3>
+        <p>
+          Aufgaben strukturieren, Abläufe nachvollziehen
+          und sorgfältig abarbeiten.
+        </p>
+      </div>
+
+      <div class="skill">
+        <div class="skill-number">06</div>
+        <h3>Arbeitssicherheit</h3>
+        <p>
+          Praktische Erfahrung mit Hygiene, Sicherheit
+          und dem sorgfältigen Umgang mit Arbeitsmitteln.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- SPRACHEN -->
+
+<section>
+  <div class="container">
+
+    <div class="section-head">
+      <div class="section-number">04 / SPRACHEN</div>
+
+      <div>
+        <h2 class="section-title">Sprachen.</h2>
+      </div>
+    </div>
+
+    <div class="languages">
+
+      <div class="language">
+        <span>Deutsch</span>
+        <span class="level">C2 · muttersprachliches Niveau</span>
+      </div>
+
+      <div class="language">
+        <span>Russisch</span>
+        <span class="level">C2</span>
+      </div>
+
+      <div class="language">
+        <span>Armenisch</span>
+        <span class="level">C2</span>
+      </div>
+
+      <div class="language">
+        <span>Yesidisch</span>
+        <span class="level">C2</span>
+      </div>
+
+      <div class="language">
+        <span>Englisch</span>
+        <span class="level">B2</span>
+      </div>
+
+      <div class="language">
+        <span>Französisch</span>
+        <span class="level">B1</span>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- MOBILITÄT -->
+
+<section>
+  <div class="container">
+
+    <div class="section-head">
+      <div class="section-number">05 / MOBILITÄT</div>
+
+      <div>
+        <h2 class="section-title">Führerschein.</h2>
+      </div>
+    </div>
+
+    <div class="mobility">
+
+      <div>
+        <h3>Klasse B</h3>
+        <p>
+          Die theoretische Prüfung wurde am 06.07.2026
+          mit 4 Fehlerpunkten bestanden.
+        </p>
+      </div>
+
+      <div class="mobility-status">
+        Praktische Prüfung steht noch aus.
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- DOKUMENTE -->
+
+<section id="dokumente">
+  <div class="container">
+
+    <div class="section-head">
+      <div class="section-number">06 / DOKUMENTE</div>
+
+      <div>
+        <h2 class="section-title">Unterlagen.</h2>
+
+        <p class="section-intro">
+          Ausgewählte Nachweise und Bewerbungsunterlagen.
+          Die Dokumente werden direkt aus dem Portfolio geöffnet.
+        </p>
+      </div>
+    </div>
+
+
+    <div class="documents">
+
+      <div class="document">
+        <small>Lebenslauf</small>
+        <h3>Lebenslauf Yusup Avdalyan</h3>
+        <a href="Documents/Lebenslauf Yusup Avdalyan 26.09.2026.pdf"
+           target="_blank">
+          PDF öffnen →
+        </a>
+      </div>
+
+
+      <div class="document">
+        <small>Bewerberprofil</small>
+        <h3>Persönliches Bewerberprofil</h3>
+        <a href="Documents/Yusup-Avdalyan.pdf"
+           target="_blank">
+          PDF öffnen →
+        </a>
+      </div>
+
+
+      <div class="document">
+        <small>Motivation</small>
+        <h3>Motivationsschreiben</h3>
+        <a href="Documents/Motivationsschreiben 2026 YA.pdf"
+           target="_blank">
+          PDF öffnen →
+        </a>
+      </div>
+
+
+      <div class="document">
+        <small>Arbeitszeugnis</small>
+        <h3>Solidplus Arbeitszeugnis</h3>
+        <a href="Documents/Solidplus Arbeitszeugniss.pdf"
+           target="_blank">
+          PDF öffnen →
+        </a>
+      </div>
+
+
+      <div class="document">
+        <small>Schulnachweis</small>
+        <h3>Bescheinigung Zeugnis Deutschland MSA</h3>
+        <a href="Documents/Bescheinigung Zeugnis Deutschland MSA.pdf"
+           target="_blank">
+          PDF öffnen →
+        </a>
+      </div>
+
+
+      <div class="document">
+        <small>Fahrerlaubnis</small>
+        <h3>Dekra Theorie</h3>
+        <a href="Documents/Dekra Theorie.pdf"
+           target="_blank">
+          PDF öffnen →
+        </a>
+      </div>
+
+
+      <div class="document">
+        <small>Schule</small>
+        <h3>Zeugnis 1 Halbjahr 2026</h3>
+        <a href="Documents/Zeugnis 1 Halbjahr 2026.pdf"
+           target="_blank">
+          PDF öffnen →
+        </a>
+      </div>
+
+
+      <div class="document">
+        <small>Schule</small>
+        <h3>Zeugnis Übersetzung</h3>
+        <a href="Documents/Zeugnis Übersetzung.pdf"
+           target="_blank">
+          PDF öffnen →
+        </a>
+      </div>
+
+
+      <div class="document">
+        <small>Schule</small>
+        <h3>Zeugnisse 1 Jahr 2 Halbjahr 2026 Max Taut Schule</h3>
+        <a href="Documents/Zeugnisse 1 Jahr 2 Halbjahr 2026 Max Taut Schule .pdf"
+           target="_blank">
+          PDF öffnen →
+        </a>
+      </div>
+
+
+      <div class="document">
+        <small>Berichtsheft</small>
+        <h3>Berichtsheft Yusup Avdalyan</h3>
+        <a href="Documents/Berichtsheft_Yusup_Avdalyan_01-10-2026.pdf"
+           target="_blank">
+          PDF öffnen →
+        </a>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- KONTAKT -->
+
+<section id="kontakt" class="contact">
+  <div class="container">
+
+    <div class="section-head">
+      <div class="section-number">07 / KONTAKT</div>
+
+      <div>
+        <h2 class="section-title">Kontakt.</h2>
+      </div>
+    </div>
+
+    <div class="contact-grid">
+
+      <div>
+
+        <a class="contact-link"
+           href="tel:+491604922559">
+
+          <div class="contact-icon">↗</div>
+
+          <div class="contact-text">
+            <small>Telefon</small>
+            <strong>+49 160 492 2559</strong>
+          </div>
+
+        </a>
+
+
+        <a class="contact-link"
+           href="mailto:Yusupavdalyan02@gmail.com">
+
+          <div class="contact-icon">↗</div>
+
+          <div class="contact-text">
+            <small>E-Mail</small>
+            <strong>Yusupavdalyan02@gmail.com</strong>
+          </div>
+
+        </a>
+
+
+        <div class="contact-link">
+
+          <div class="contact-icon">●</div>
+
+          <div class="contact-text">
+            <small>Standort</small>
+            <strong>Berlin</strong>
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div>
+        <p style="color:#aaa;font-size:18px;line-height:1.7;">
+          Vielen Dank für Ihr Interesse an meinem Profil.
+          Für Rückfragen, Gespräche oder passende
+          Ausbildungs- und Entwicklungsmöglichkeiten
+          freue ich mich über Ihre Kontaktaufnahme.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+</main>
+
+
+<footer>
+  <div class="container footer-inner">
+    <div>© 2026 Yusup Avdalyan</div>
+    <div>Persönliches Portfolio · Berlin</div>
+  </div>
+</footer>
+
+</body>
+</html>
